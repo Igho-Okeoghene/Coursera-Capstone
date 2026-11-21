@@ -1,16 +1,114 @@
-# React + Vite
+# React Capstone — Little Lemon Table Booking
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive React reservation application for Little Lemon, a Mediterranean restaurant in Chicago. It was created as the final project for the Meta Front-End Developer Certificate and provides a complete, accessible table-booking flow.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Responsive restaurant reservation interface
+- Date, time, party size, occasion, contact, and notes fields
+- Weekend and weekday seating-time options
+- Past-date and required-field validation
+- Email and guest-count validation
+- Accessible labels, focus states, error summaries, and live confirmation feedback
+- Confirmation details with a generated reservation code
+- Ability to make another reservation
+- Automated component tests
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React 19
+- Vite 8
+- JavaScript (ES modules)
+- CSS
+- Vitest
+- React Testing Library
+- ESLint
 
-## Expanding the ESLint configuration
+## Project Structure
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```text
+React Capstone/
+├── public/
+│   └── favicon.svg
+├── src/
+│   ├── assets/
+│   ├── components/
+│   │   ├── BookingSection.jsx
+│   │   ├── BookingSection.css
+│   │   └── BookingSection.test.jsx
+│   ├── App.jsx
+│   ├── App.css
+│   ├── index.css
+│   └── main.jsx
+├── eslint.config.js
+├── index.html
+├── package.json
+├── package-lock.json
+├── vite.config.js
+└── README.md
+```
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js 20 or newer
+- npm
+
+### Clone and Install
+
+```bash
+git clone https://github.com/YOUR-USERNAME/React-Capstone.git
+cd React-Capstone
+npm install
+```
+
+Replace `YOUR-USERNAME` with your GitHub username if the repository is hosted on GitHub.
+
+### Run the Development Server
+
+```bash
+npm run dev
+```
+
+Open the local URL printed by Vite, usually `http://localhost:5173`.
+
+## Available Scripts
+
+| Command | Purpose |
+|---|---|
+| `npm run dev` | Start the Vite development server |
+| `npm run build` | Create a production build in `dist/` |
+| `npm run preview` | Preview the production build locally |
+| `npm test` | Run unit tests once |
+| `npm run test:watch` | Run tests in watch mode |
+| `npm run lint` | Check source files with ESLint |
+
+## Testing
+
+The component tests cover initial form rendering, validation, and a successful booking confirmation.
+
+```bash
+npm test
+```
+
+## Recommended Future Improvements
+
+- Add a backend API and persistent reservation database
+- Prevent double bookings by checking reserved time slots
+- Integrate a restaurant API or CMS for availability and menu data
+- Add phone-number collection and SMS/email confirmation
+- Add cancellation and reservation-management functionality
+- Improve date formatting for a more readable confirmation summary
+- Add booking analytics and automated end-to-end browser tests
+- Replace the generated confirmation code with a server-generated booking reference
+- Add stronger date, name, and international email handling
+- Deploy the production build to GitHub Pages, Netlify, or Vercel
+
+## Author
+
+Okeoghene Makanjuola
+
+## Course
+
+Meta Front-End Developer Certificate — Capstone Project

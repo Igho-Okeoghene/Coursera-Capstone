@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from "react";
+import { useMemo, useState } from "react";
 
 const INITIAL_TIMES_BY_DAY = {
   // Default slots; dynamically adjusted by selected date
